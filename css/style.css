@@ -17,7 +17,13 @@ p{
   width: 35%;
 }
 .listItem{
+  background: #00A8E8;
+  height: 25px;
+  margin: 2% 15%;
   text-align: left;
+}
+.close{
+  text-align: right;
 }
 .button{
   font-size: 20px;
@@ -48,7 +54,9 @@ p{
 }
 .listContainer{
   width: 300px;
-  margin: 0 auto;
+  height: 500px;
+  overflow: auto;
+  margin: 2% auto;
   text-align: left;
-  background: #00A8E8;
+  background: #00171F;
 }

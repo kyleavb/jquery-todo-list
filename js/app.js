@@ -1,7 +1,10 @@
 
+$('ul').sortable();
+$('ul').disableSelection();
 
 function removeElement(){
-  this.remove();
+  var parent = this.parentNode
+  parent.parentNode.removeChild(parent);
 }
 function highlightButton(obj){
   obj.hover(function(){
@@ -24,20 +27,23 @@ rotateButton($('.addbutton'), 45);
 
 $('.addbutton').on("click", function(){
   $('.overlay').css("display", "table");
+  $('.taskText').focus();
 });
 
 $('.formclose').on("click",function(e){
   $('.overlay').css("display", "none");
 })
 
+
+
 $('#newListItem').on("submit", function(e){
   e.preventDefault();
   var text = $('.taskText').val();
   $('.taskText').val("");
-  text = text
+  text = 'Task: ' + text;
   if(text){
-    $('.listContainer').append('<li class="listItem">' + text);
+    var item = $('.unordered').append('<li class="listItem">' + text + '<img class="close" align="right" src= img/cancel.png>');
     $('.overlay').css('display', "none");
-    $('li').on("click", removeElement);
+    $('.close').on("click", removeElement);
   }
 });
