@@ -41,7 +41,7 @@ p{
 .overlay{
   color: #003459;
   position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
+  display: table; /* Hidden by default */
   width: 240px; /* Full width (cover the whole page) */
   height: 150px; /* Full height (cover the whole page) */
   top: 15%;

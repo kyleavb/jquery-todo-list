@@ -1,10 +1,11 @@
 
+$('.overlay').hide();
 $('ul').sortable();
 $('ul').disableSelection();
+$('.overlay').draggable();
 
 function removeElement(){
-  var parent = this.parentNode
-  parent.parentNode.removeChild(parent);
+  $(this).parent().remove();
 }
 function highlightButton(obj){
   obj.hover(function(){
@@ -26,7 +27,8 @@ highlightButton($('.button'));
 rotateButton($('.addbutton'), 45);
 
 $('.addbutton').on("click", function(){
-  $('.overlay').css("display", "table");
+  $('.overlay').show('slow');
+
   $('.taskText').focus();
 });
 
