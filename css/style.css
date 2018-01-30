@@ -1,0 +1,54 @@
+body{
+  text-align: center;
+  background: white;
+}
+li{
+  text-align: left;
+  list-style: none;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+.listContainer{
+  background: #BDC4A7;
+  text-align: center;
+  margin: auto;
+  width: 35%;
+}
+.listItem{
+  text-align: left;
+}
+.button{
+  font-size: 20px;
+  opacity: .8;
+  background: #003459;
+}
+.addbutton{
+  outline: none;
+  color: white;
+  border-radius: 100%;
+  font-size: 150%;
+  height: 40px;
+  width: 40px;
+}
+.overlay{
+  color: #003459;
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 240px; /* Full width (cover the whole page) */
+  height: 150px; /* Full height (cover the whole page) */
+  top: 15%;
+  left: 60%;
+  border-radius: 10%;
+  background-color: #00A8E8;
+  opacity: .85;
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+}
+.listContainer{
+  width: 300px;
+  margin: 0 auto;
+  text-align: left;
+  background: #00A8E8;
+}
